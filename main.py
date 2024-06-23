@@ -54,7 +54,7 @@ async def process_update(request: Request):
     if not telegram_bot._initialized:
         await telegram_bot.initialize()
     await telegram_bot.process_update(update)
-    return Response(status_code=HTTPStatus.OK)
+    return {"message": "ok"}  # Response(status_code=HTTPStatus.OK)
 
 
 if __name__ == '__main__':
