@@ -13,7 +13,7 @@ FORBIDDEN_WORD = os.getenv("HAMSTER_URL_BASE")
 WEBHOOK_BASE = os.getenv("WEBHOOK_BASE")
 
 
-def delete_messages_with_hamster(update, context):
+async def delete_messages_with_hamster(update, context):
     print("new message")
     message_text = update.message.text.lower()
     if FORBIDDEN_WORD in message_text:
