@@ -10,8 +10,8 @@ from telegram import Update
 from telegram.ext import MessageHandler, Application, filters
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-with open("forbidden_words.json", 'r') as f:
-    FORBIDDEN_WORDS = json.load(f)  # os.getenv("HAMSTER_URL_BASE")
+with open("forbidden_words.txt", 'r') as f:
+    FORBIDDEN_WORDS = [i.strip() for i in f.readlines()]
 WEBHOOK_BASE = os.getenv("WEBHOOK_BASE")
 with open("deletion_message.txt", "r") as f:
     DELETION_MESSAGE_TEMPLATE = f.readline()
