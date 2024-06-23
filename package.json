@@ -5,6 +5,8 @@
     "start": "python main.py"
   },
   "dependencies": {
-    "python-telegram-bot": "13.7"
+    "python-telegram-bot": "13.11",
+    "urllib3": "1.26.9",
+    "six": "1.16.0"
   }
 }
