@@ -10,7 +10,7 @@ from telegram import Update
 from telegram.ext import MessageHandler, Application, filters
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-with open("forbidden_words.txt", 'r') as f:
+with open("forbidden_words.txt", 'r', encoding="Windows-1251") as f:
     FORBIDDEN_WORDS = [i.strip() for i in f.readlines()]
 WEBHOOK_BASE = os.getenv("WEBHOOK_BASE")
 with open("deletion_message.txt", "r") as f:
