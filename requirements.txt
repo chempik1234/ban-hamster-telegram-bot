@@ -1,4 +1,6 @@
-python-telegram-bot==13.3
-pydantic==2.7.4
+python-telegram-bot==21.3
+urllib3==1.26.9
+six==1.16.0
 fastapi==0.111.0
+pydantic==2.7.4
 uvicorn==0.30.1
