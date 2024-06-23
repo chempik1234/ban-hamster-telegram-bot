@@ -51,6 +51,8 @@ async def index():
 async def process_update(request: Request):
     request_json = await request.json()
     update = Update.de_json(request_json, telegram_bot.bot)
+    if not telegram_bot._initialized:
+        await telegram_bot.initialize()
     await telegram_bot.process_update(update)
     return Response(status_code=HTTPStatus.OK)
 
