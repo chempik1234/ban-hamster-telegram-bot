@@ -1,9 +1,11 @@
+import os
+
 from telegram import Bot, Update
 from telegram.ext import Updater, MessageHandler, Filters, CommandHandler, Dispatcher
 
-TOKEN = "7456116559:AAGamCQDAr2Zj3PtvpWMcThyCEdZgcQB8a0"  # os.getenv("TELEGRAM_TOKEN")
-FORBIDDEN_WORD = "https://t.me/hamster_kombat_bot/"  # os.getenv("HAMSTER_URL_BASE")
-START_TEXT = "start text"  # os.getenv("HAMSTER_BAN_BOT_START_TEXT")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+FORBIDDEN_WORD = os.getenv("HAMSTER_URL_BASE")
+START_TEXT = os.getenv("HAMSTER_BAN_BOT_START_TEXT")
 
 
 def start(update, context):

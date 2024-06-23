@@ -1,6 +1,4 @@
-import os
 from typing import Optional
-
 import uvicorn
 from pydantic import BaseModel
 from fastapi import FastAPI
