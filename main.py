@@ -17,7 +17,7 @@ async def delete_messages_with_hamster(update, context):
     print("new message")
     message_text = update.message.text.lower()
     if FORBIDDEN_WORD in message_text:
-        context.bot.delete_message(chat_id=update.effective_chat.id, message_id=update.message.message_id)
+        await context.bot.delete_message(chat_id=update.effective_chat.id, message_id=update.message.message_id)
 
 
 telegram_bot = (Application.builder()
