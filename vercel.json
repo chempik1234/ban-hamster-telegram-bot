@@ -2,10 +2,6 @@
     "version": 2,
     "builds": [
         {
-            "src": "build.sh",
-            "use": "@vercel/static-build"
-        },
-        {
             "src": "main.py",
             "use": "@vercel/python",
             "config": {
